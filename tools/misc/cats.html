@@ -1,0 +1,61 @@
+<!doctypehtml><html lang="en"><meta charset="UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport"><title>The 11 View | Cat Generator</title><meta content="Elevate your online presence with our premium bio link service. Connect all your social media and websites in one elegant place." name="description"><meta content="#3b82f6" name="theme-color"><meta content="The 11 View" property="og:title"><meta content="Elevate your online presence with our premium bio link service. Connect all your social media and websites in one elegant place." property="og:description"><meta content="https://t11v.icu/host/ea86ec6e-e9f4-4e34-bfa5-b80dc0f2887a.png" property="og:image"><meta content="https://the11view.xyz" property="og:url"><meta content="website" property="og:type"><meta content="summary" name="twitter:card"><meta content="The 11 View" name="twitter:title"><meta content="Elevate your online presence with our premium bio link service. Connect all your social media and websites in one elegant place." name="twitter:description"><meta content="https://t11v.icu/host/ea86ec6e-e9f4-4e34-bfa5-b80dc0f2887a.png" name="twitter:image"><link href="/assets/imgs/favicon.svg" rel="icon" type="image/x-icon"><style>:root{--accent:#2563eb;--accent-soft:#4f8ff6;--bg:#010101;--card-bg:rgba(18, 18, 20, 0.86)}*{box-sizing:border-box;margin:0;padding:0}body{min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at top,#121822,#000);font-family:'Roboto Mono',monospace;color:#fff;overflow:hidden;line-height:1.5}body::before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:80px 80px;z-index:0}.container{background:rgba(20,20,20,.7);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(25px);border-radius:20px;padding:50px 30px;text-align:center;max-width:900px;width:100%;box-shadow:0 0 40px rgba(0,0,0,.8);animation:floaty 6s ease-in-out infinite}h1{font-size:2.5rem;margin-bottom:15px;background:linear-gradient(to right,#2563eb,#4f8ff6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.whisper{font-size:1rem;color:#bbb;font-style:italic;margin-bottom:25px;min-height:22px}.settings{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:25px}.settings label{display:flex;flex-direction:column;font-size:.9rem;color:#ddd;gap:6px}.settings input,.settings select{background:rgba(30,30,30,.85);border:1px solid rgba(255,255,255,.15);border-radius:8px;color:#fff;padding:10px 14px;font-size:.95rem;transition:border .3s ease,background .3s ease,box-shadow .3s ease;appearance:none;cursor:pointer}.settings select option{background:#111;color:#fff}.settings input:focus,.settings select:focus{outline:0;border-color:#2563eb;background:rgba(37,99,235,.15);box-shadow:0 0 12px rgba(37,99,235,.7)}button{background:#2563eb;border:none;border-radius:10px;padding:14px 36px;color:#fff;font-size:1rem;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,background .3s ease;box-shadow:0 4px 15px rgba(0,0,0,.3)}button:hover{transform:scale(1.05);box-shadow:0 6px 20px rgba(0,0,0,.5);background:#1e4edb}.cat-container{margin-top:30px;display:grid;gap:20px;transition:all .4s ease}.cat-box{background:rgba(20,20,20,.7);border:1px solid rgba(255,255,255,.1);border-radius:15px;padding:12px;backdrop-filter:blur(12px);animation:fadeIn .5s ease;box-shadow:0 4px 20px rgba(0,0,0,.6);display:flex;justify-content:center;align-items:center;max-height:300px;overflow:hidden}.cat-box img{max-width:100%;max-height:280px;border-radius:10px;display:block;object-fit:cover;transition:transform .3s ease}.cat-box img:hover{transform:scale(1.05)}@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}@keyframes fadeIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}</style><div class="container"><h1>🐾 Cat Generator</h1><p class="whisper">click the button, let gravy generate you a cat<div class="settings"><label>Amount <input id="amount" max="10" min="1" type="number" value="1"></label><label>Type<select id="fileType"><option value="jpg">jpg/png<option value="gif">gif</select></label><label>Mode<select id="mode"><option value="normal">normal<option value="quick">quick generate</select></label></div><button onclick="generateCats()">Generate cats</button><div class="cat-container" id="catBox"></div></div><script>const whispers = [
+      "gravy found this one hiding in the code",
+      "gravy says this cat understands your pain",
+      "gravy sent a cat to rescue your vibe",
+      "gravy thinks cats are better than fixing errors",
+      "gravy asked this cat to stand in for the page",
+      "gravy says this cat is here to keep you company",
+      "gravy cannot fix the site but he can send cats",
+      "gravy says this cat knows the way back",
+      "gravy swears this cat is a professional debugger",
+      "gravy just wanted you to see this little guy",
+      "gravy says he would keep this cat but he thought of you first",
+      "gravy says this cat will sit with you like a loyal friend",
+      "gravy found this cat while pretending to work",
+      "gravy says the cat picked you not him",
+      "gravy says this cat looks like it knows all your secrets and approves",
+      "gravy claims the cat winked at him before coming here",
+      "gravy says this one insists on being your companion",
+      "gravy says the cat promised to keep your chair warm",
+      "gravy says he almost kept this cat but you deserve it more"
+    ];
+
+    async function generateCats() {
+      const whisper = whispers[Math.floor(Math.random() * whispers.length)];
+      document.querySelector(".whisper").textContent = whisper;
+
+      const amount = parseInt(document.getElementById("amount").value) || 1;
+      const type = document.getElementById("fileType").value;
+      const mode = document.getElementById("mode").value;
+      const catBox = document.getElementById("catBox");
+
+      if (mode !== "quick") {
+        catBox.innerHTML = "";
+      }
+
+      if (amount > 1) {
+        catBox.style.gridTemplateColumns = `repeat(auto-fit, minmax(220px, 1fr))`;
+      } else {
+        catBox.style.gridTemplateColumns = "1fr";
+      }
+
+      for (let i = 0; i < amount; i++) {
+        const catUrl = type === "gif"
+          ? `https://cataas.com/cat/gif?${Date.now()}-${i}`
+          : `https://cataas.com/cat?${Date.now()}-${i}`;
+
+        const box = document.createElement("div");
+        box.className = "cat-box";
+
+        const img = document.createElement("img");
+        img.src = catUrl;
+        img.alt = "Random Cat";
+
+        box.appendChild(img);
+        catBox.appendChild(box);
+
+        if (mode !== "quick") {
+          await new Promise(r => setTimeout(r, 300));
+        }
+      }
+    }</script>
