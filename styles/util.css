@@ -11,7 +11,6 @@ body {
 	overflow-x: hidden;
 }
 
-/* Custom Accent Colors */
 .accent-primary {
 	background: linear-gradient(135deg, #2563eb, #3b82f6);
 }
@@ -27,7 +26,6 @@ body {
 	box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
 }
 
-/* Gradient Text */
 .gradient-text {
 	background: linear-gradient(135deg, #2563eb, #3b82f6);
 	-webkit-background-clip: text;
@@ -35,14 +33,12 @@ body {
 	background-clip: text;
 }
 
-/* Glass Card Effect */
 .glass-card {
 	background: rgba(17, 17, 17, 0.7);
 	backdrop-filter: blur(10px);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Animated Background */
 .animated-bg {
 	position: fixed;
 	top: 0;
@@ -57,7 +53,6 @@ body {
 	animation: bgMove 20s ease-in-out infinite alternate;
 }
 
-/* Particles Animation */
 .particles {
 	position: absolute;
 	top: 0;
@@ -95,7 +90,6 @@ body {
 	}
 }
 
-/* Legal Pages */
 .legal-content {
 	max-width: 4xl;
 	margin: 0 auto;
@@ -147,7 +141,6 @@ body {
 	text-decoration: underline;
 }
 
-/* Mobile Menu */
 .mobile-menu {
 	display: none;
 	position: fixed;
@@ -177,7 +170,6 @@ body {
 	background: rgba(59, 130, 246, 0.1);
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
 	.legal-content {
 		padding: 1rem;
@@ -194,4 +186,5 @@ body {
 	.legal-content h3 {
 		font-size: 1.25rem;
 	}
+
 }
