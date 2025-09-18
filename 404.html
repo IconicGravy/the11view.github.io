@@ -1,0 +1,36 @@
+<!-- Escape the matrix -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The 11 View | 404</title><meta name="description" content="Elevate your online presence with our premium bio link service. Connect all your social media and websites in one elegant place."><meta name="theme-color" content="#3b82f6"><meta property="og:title" content="The 11 View"><meta property="og:description" content="Elevate your online presence with our premium bio link service. Connect all your social media and websites in one elegant place."><meta property="og:image" content="https://t11v.icu/host/ea86ec6e-e9f4-4e34-bfa5-b80dc0f2887a.png"><meta property="og:url" content="https://the11view.xyz"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="The 11 View"><meta name="twitter:description" content="Elevate your online presence with our premium bio link service. Connect all your social media and websites in one elegant place."><meta name="twitter:image" content="https://t11v.icu/host/ea86ec6e-e9f4-4e34-bfa5-b80dc0f2887a.png"><link rel="icon" href="/assets/imgs/favicon.svg" type="image/x-icon"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"><style>body{margin:0;height:100vh;background:#000;display:flex;justify-content:center;align-items:center;font-family:Inter,'Segoe UI',Tahoma,sans-serif;color:#fff;overflow:hidden}.card{backdrop-filter:blur(60px) saturate(300%);-webkit-backdrop-filter:blur(60px) saturate(300%);background:rgba(20,20,20,.15);border-radius:28px;border:1px solid rgba(255,255,255,.08);padding:35px 40px;text-align:center;box-shadow:0 15px 50px rgba(0,0,0,.65),inset 0 1px 2px rgba(255,255,255,.08);animation:floaty 8s ease-in-out infinite;max-width:500px;width:85%;transition:all .4s ease;position:relative;z-index:1}.brand{font-size:.9rem;letter-spacing:3px;color:#aaa;margin-bottom:20px;text-transform:uppercase}h1{font-size:clamp(3.2rem,8vw,6rem);margin:0;line-height:1.1;background:linear-gradient(90deg,#fff,#444,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200% auto;animation:shimmerText 5s infinite linear}.description{font-size:clamp(.95rem,2vw,1.15rem);color:#ccc;margin:18px 0 28px;min-height:32px}a{position:relative;display:inline-block;padding:12px 30px;border-radius:14px;background:#2563eb;color:#fff;text-decoration:none;font-weight:600;font-size:.95rem;letter-spacing:.6px;overflow:hidden;box-shadow:0 4px 20px rgba(59,130,246,.35);transition:transform .3s ease,box-shadow .3s ease}a:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(59,130,246,.55)}a::before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);transition:all .7s ease}a:hover::before{left:100%}@keyframes floaty{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-10px) scale(1.01)}}@keyframes shimmerText{0%{background-position:-200px 0}100%{background-position:200px 0}}.background{position:absolute;width:550px;height:550px;background:radial-gradient(circle,rgba(59,130,246,.18) 0,transparent 70%);border-radius:50%;animation:pulse 14s infinite alternate;z-index:-1;filter:blur(90px)}.background:nth-child(1){top:-200px;left:-200px}.background:nth-child(2){bottom:-200px;right:-150px;animation-delay:6s}@keyframes pulse{0%{transform:scale(1);opacity:.35}100%{transform:scale(1.25);opacity:.7}}.catBox{position:fixed;bottom:20px;right:20px;backdrop-filter:blur(40px) saturate(200%);-webkit-backdrop-filter:blur(40px) saturate(200%);background:rgba(20,20,20,.25);border-radius:18px;border:1px solid rgba(255,255,255,.08);padding:10px;max-width:160px;box-shadow:0 8px 25px rgba(0,0,0,.55),inset 0 1px 2px rgba(255,255,255,.08);text-align:center;animation:popIn .8s ease}.catWhisper{font-size:.75rem;font-style:italic;color:#bbb;margin-bottom:6px;opacity:.8}.catBox img{width:100%;height:auto;border-radius:12px;display:block}@keyframes popIn{0%{transform:scale(.5) translateY(40px);opacity:0}100%{transform:scale(1) translateY(0);opacity:1}}</style></head><body><div class="background"></div><div class="background"></div><div class="card"><div class="brand">The 11 View</div><h1>404</h1><div class="description" id="desc"></div><a href="/">Escape the matrix</a></div><div class="catBox" id="catBox"><div class="catWhisper">dumbass gravy broke the site again, here's a cat as an apology.</div></div><script>const path = window.location.pathname.replace("/", "");
+    const messages = [
+      "This isn’t a bug, it’s a feature.",
+      "Not you again.",
+      `What is this even about ${path} 🤨`,
+      "This page doesn’t exist in our view.",
+      "You’ve reached the end of the internet.",
+      `Wow, it's your lucky day this name isn't claimed yet: ${path}`,
+      "Looks like we misplaced that one.",
+      "Even we can’t find what you’re looking for.",
+      "404: The view is empty.",
+      "Wrong turn. It happens. Keep going pal.",
+      "Must've been the wind 🥀",
+      "Another one bites the dust.",
+      "This isn’t where your journey continues broski 😭.",
+      "What in the skies are you even looking for",
+      "Ari says Hi 👋"
+    ];
+    const desc = document.getElementById("desc");
+    const page = window.location.pathname;
+    const msg = messages[Math.floor(Math.random() * messages.length)].replace("{page}", page);
+    desc.textContent = msg;
+
+    async function loadCat() {
+      try {
+        const res = await fetch("https://api.thecatapi.com/v1/images/search");
+        const data = await res.json();
+        const imgUrl = data[0].url;
+        document.getElementById("catBox").innerHTML += `<img src="${imgUrl}" alt="Random Cat">`;
+      } catch (e) {
+        console.error("Cat API failed", e);
+        document.getElementById("catBox").innerHTML += `<div style="font-size:2rem">pussy</div>`;
+      }
+    }
+    loadCat();</script></body></html>
