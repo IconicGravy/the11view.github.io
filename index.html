@@ -21,6 +21,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="/styles/global.css" rel="stylesheet" type="text/css">
 </head>
+<script>
+(function () {
+  const LINK = "https://www.revenuecpmgate.com/gdqwbet7yq?key=88fcd37194904c979300128e902db2c6";
+  const COOKIE_NAME = "adsterraShown";
+  const COOLDOWN_MINUTES = 10;
+
+  function setCookie(name, value, minutes) {
+    const d = new Date();
+    d.setTime(d.getTime() + minutes*60*1000);
+    document.cookie = name + "=" + encodeURIComponent(value) + ";expires=" + d.toUTCString() + ";path=/";
+  }
+
+  function getCookie(name) {
+    const match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+
+  function alreadyShown() {
+    return !!getCookie(COOKIE_NAME);
+  }
+
+  function openOnce(evt) {
+    try {
+      if (alreadyShown()) return cleanup();
+
+      window.open(LINK, "_blank");
+      setCookie(COOKIE_NAME, "true", COOLDOWN_MINUTES);
+    } catch (err) {
+      console.error("openOnce error:", err);
+    }
+    cleanup();
+  }
+
+  function cleanup() {
+    // remove listeners after first attempt
+    document.removeEventListener("pointerdown", openOnce, {passive: true});
+    document.removeEventListener("touchstart", openOnce, {passive: true});
+    document.removeEventListener("keydown", openOnce, {passive: true});
+    document.removeEventListener("click", openOnce, {passive: true});
+  }
+
+  // Attach listeners
+  document.addEventListener("pointerdown", openOnce, {passive: true});
+  document.addEventListener("touchstart", openOnce, {passive: true});
+  document.addEventListener("keydown", openOnce, {passive: true});
+  document.addEventListener("click", openOnce, {passive: true});
+})();
+</script>
 <body>
     <div class="animated-bg"></div>
     <div class="particles"></div>
@@ -328,42 +376,6 @@
     </footer>
 	<!-- Ads -->
     <script async src="https://pl27689542.revenuecpmgate.com/e7ff059a0f007e29247abf9b9a9c665c/invoke.js"></script>
-<script>
-  function setCookie(name, value, minutes) {
-    let d = new Date();
-    d.setTime(d.getTime() + (minutes*60*1000));
-    let expires = "expires=" + d.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path=/";
-  }
-
-  function getCookie(name) {
-    let cname = name + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-      let c = ca[i].trim();
-      if (c.indexOf(cname) == 0) {
-        return c.substring(cname.length, c.length);
-      }
-    }
-    return "";
-  }
-
-  function openAd() {
-    if (!getCookie("adsterraShown")) {
-      setCookie("adsterraShown", "true", 5);
-      window.open(
-        "https://www.revenuecpmgate.com/gdqwbet7yq?key=88fcd37194904c979300128e902db2c6",
-        "_blank"
-      );
-    }
-  }
-
-  // Trigger ad only once after user interacts
-  document.addEventListener("click", openAd, { once: true });
-  document.addEventListener("keydown", openAd, { once: true });
-  document.addEventListener("scroll", openAd, { once: true });
-</script>
 	<!-- Main script -->
     <script>
         // No need for a external file be wise. also be aware of horrid code ik it is
@@ -469,6 +481,7 @@
 </body>
 
 </html>
+
 
 
 
