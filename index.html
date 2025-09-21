@@ -326,7 +326,41 @@
             </div>
         </div>
     </footer>
-    <script async src="https://pl27689542.revenuecpmgate.com/e7ff059a0f007e29247abf9b9a9c665c/invoke.js"></script> <!-- Ads -->
+	<!-- Ads -->
+    <script async src="https://pl27689542.revenuecpmgate.com/e7ff059a0f007e29247abf9b9a9c665c/invoke.js"></script>
+	<script>
+  function setCookie(name, value, minutes) {
+    let d = new Date();
+    d.setTime(d.getTime() + (minutes*60*1000));
+    let expires = "expires=" + d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+  }
+
+  function getCookie(name) {
+    let cname = name + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i].trim();
+      if (c.indexOf(cname) == 0) {
+        return c.substring(cname.length, c.length);
+      }
+    }
+    return "";
+  }
+
+  // Run on page load
+  window.onload = function() {
+    if (!getCookie("adsterraShown")) {
+      setCookie("adsterraShown", "true", 5); 
+      window.open(
+        "https://www.revenuecpmgate.com/gdqwbet7yq?key=88fcd37194904c979300128e902db2c6",
+        "_blank"
+      );
+    }
+  };
+</script>
+	<!-- Main script -->
     <script>
         // No need for a external file be wise. also be aware of horrid code ik it is
         function generateParticles() {
@@ -431,6 +465,7 @@
 </body>
 
 </html>
+
 
 
 
