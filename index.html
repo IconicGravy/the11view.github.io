@@ -328,7 +328,7 @@
     </footer>
 	<!-- Ads -->
     <script async src="https://pl27689542.revenuecpmgate.com/e7ff059a0f007e29247abf9b9a9c665c/invoke.js"></script>
-	<script>
+<script>
   function setCookie(name, value, minutes) {
     let d = new Date();
     d.setTime(d.getTime() + (minutes*60*1000));
@@ -349,16 +349,20 @@
     return "";
   }
 
-  // Run on page load
-  window.onload = function() {
+  function openAd() {
     if (!getCookie("adsterraShown")) {
-      setCookie("adsterraShown", "true", 5); 
+      setCookie("adsterraShown", "true", 5);
       window.open(
         "https://www.revenuecpmgate.com/gdqwbet7yq?key=88fcd37194904c979300128e902db2c6",
         "_blank"
       );
     }
-  };
+  }
+
+  // Trigger ad only once after user interacts
+  document.addEventListener("click", openAd, { once: true });
+  document.addEventListener("keydown", openAd, { once: true });
+  document.addEventListener("scroll", openAd, { once: true });
 </script>
 	<!-- Main script -->
     <script>
@@ -465,6 +469,7 @@
 </body>
 
 </html>
+
 
 
 
