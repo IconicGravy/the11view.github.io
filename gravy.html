@@ -1,0 +1,228 @@
+<!--- Take this as an example page for every feature in The 11 View --->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravy </></title>
+    <meta name="description" content="wow gravy's so cool">
+    <meta name="theme-color" content="#4284f5">
+    <meta property="og:title" content="The 11 View | Gravy">
+    <meta property="og:description" content="wow gravy's so cool">
+    <meta property="og:image" content="https://www.t11v.icu/dropper/kf0b8ek4ij811.gif">
+    <meta property="og:url" content="https://the11view.xyz">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The 11 View | Gravy">
+    <meta name="twitter:description" content="wow gravy's so cool">
+    <meta name="twitter:image" content="https://www.t11v.icu/dropper/kf0b8ek4ij811.gif">
+    <link rel="icon" href="https://t11v.icu/imgs/icons/Icon@gravy.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles/theme.css" type="text/css">
+</head>
+<body>
+    <div class="overlay" id="overlay">
+        <h1>Gravy</h1>
+        <p>Click anywhere to enter</p>
+    </div>
+    <div class="background-container" id="background-container"></div>
+    <div class="views-container">
+        <i class="fas fa-eye"></i>
+        <span class="views-count" id="views-count">0</span>
+    </div>
+    <div class="greeting" id="greeting" style="color: #fff;"></div>
+    <div class="badges-container">
+        <div class="badge">
+            <i class="fas fa-code"></i>
+            <span class="badge-tooltip">Developer</span>
+        </div>
+        <div class="badge">
+            <i class="fas fa-fire"></i>
+            <span class="badge-tooltip">OG</span>
+        </div>
+        <div class="badge">
+            <i class="fas fa-check-circle"></i>
+            <span class="badge-tooltip">Verified</span>
+        </div>
+        <div class="badge">
+            <i class="fas fa-flask"></i>
+            <span class="badge-tooltip">Tester</span>
+        </div>
+    </div>
+    <div class="bg-controls">
+        <div class="bg-dropdown" id="bg-dropdown">
+            <div class="bg-option active" data-bg="snow">
+                <i class="fas fa-snowflake"></i> Snow
+            </div>
+            <div class="bg-option" data-bg="aurora">
+                <i class="fas fa-cloud"></i> Aurora
+            </div>
+            <div class="bg-option" data-bg="nebula">
+                <i class="fas fa-star"></i> Nebula
+            </div>
+            <div class="bg-option" data-bg="geometric">
+                <i class="fas fa-shapes"></i> Geometric
+            </div>
+            <div class="bg-option" data-bg="galaxy">
+                <i class="fas fa-satellite"></i> Galaxy
+            </div>
+        </div>
+        <button class="bg-btn" id="bg-btn">
+            <i class="fas fa-magic"></i>
+        </button>
+    </div>
+    <div class="theme-switcher">
+        <div class="theme-dropdown" id="theme-dropdown">
+            <div class="theme-option active" data-theme="dark">
+                <i class="fas fa-moon"></i> Dark
+            </div>
+            <div class="theme-option" data-theme="light">
+                <i class="fas fa-sun"></i> Light
+            </div>
+            <div class="theme-option" data-theme="spring">
+                <i class="fas fa-seedling"></i> Spring
+            </div>
+            <div class="theme-option" data-theme="summer">
+                <i class="fas fa-sun"></i> Summer
+            </div>
+            <div class="theme-option" data-theme="autumn">
+                <i class="fas fa-leaf"></i> Autumn
+            </div>
+            <div class="theme-option" data-theme="winter">
+                <i class="fas fa-snowflake"></i> Winter
+            </div>
+        </div>
+        <button class="theme-btn" id="theme-btn">
+            <i class="fas fa-palette"></i>
+        </button>
+    </div>
+    <div id="notification" class="notification">
+        <i class="fas fa-check-circle" style="color: #fff;"></i>
+        <span>Discord Username has been copied to your clipboard</span>
+    </div>
+    <div id="second-notification" class="notification">
+        <i class="fas fa-circle-xmark" style="color: #fff;"></i>
+        <span>No public github found.</span>
+    </div>
+    <div class="main-container" id="main-container">
+        <div class="card" id="profile-card" draggable="true">
+            <div class="banner"></div>
+            <div class="profile-section">
+                <div class="profile-pic-container">
+                    <img src="https://cdn.discordapp.com/avatars/1091592149105135686/a_7b1e5e8a5e5e5e5e5e5e5e5e5e5e5e.png?size=80" alt="Profile Picture" class="profile-pic" id="profile-pic">
+                    <div class="status-indicator" id="status-indicator"></div>
+                </div>
+                <div class="profile-info">
+                    <h2>Gravy<span class="owner-badge"><i class="fas fa-crown"></i>Admin</span></h2>
+                    <div class="username">@g</div>
+                    <div class="profile-badges" id="discord-badges"></div>
+                </div>
+            </div>
+            <div class="profile-title">Full stack web developer @ The 11 View.</div>
+            <div class="social-links">
+                <div class="social-link" id="discord-link" title="Discord">
+                    <i class="fab fa-discord"></i>
+                </div>
+                <a href="https://www.instagram.com/ironic.gravy/" class="social-link" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <div class="social-link" id="github-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </div>
+            </div>
+            <div class="activity-container" id="activity-container" style="display: none;">
+                <div class="activity-header">
+                    <div class="activity-icon" id="activity-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="activity-title" id="activity-title">Activity</div>
+                </div>
+                <div class="activity-details">
+                    <div class="activity-album-cover" id="activity-album-cover"></div>
+                    <div class="activity-song-info">
+                        <div class="activity-song-name" id="activity-song-name">Activity</div>
+                        <div class="activity-artist-name" id="activity-artist-name">Details</div>
+                    </div>
+                </div>
+                <div class="activity-progress" id="activity-progress-container">
+                    <div class="activity-progress-bar" id="activity-progress-bar"></div>
+                </div>
+                <div class="activity-time" id="activity-time-container">
+                    <span id="activity-current-time">0:00</span>
+                    <span id="activity-total-time">0:00</span>
+                </div>
+                <div class="error-message" id="activity-error">Failed to load activity data</div>
+            </div>
+        </div>
+        <div class="music-player" id="music-player" draggable="true">
+            <div class="music-info">
+                <div class="album-cover" id="album-cover">
+                    <i class="fas fa-music"></i>
+                </div>
+                <div class="song-details">
+                    <div class="song-header">
+                        <h3 id="song-title"></h3>
+                        <div class="song-dropdown">
+                            <button class="dropdown-btn" id="song-dropdown-btn">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content" id="song-dropdown">
+                                <div class="dropdown-item active" data-index="0">FLEXICAN GUDDA LUV</div>
+                                <div class="dropdown-item" data-index="1">Falling out the Sky</div>
+                                <div class="dropdown-item" data-index="2">fall in drugs</div>
+                                <div class="dropdown-item" data-index="3">K1LL</div>
+                                <div class="dropdown-item" data-index="4">Box Turtle</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="artist-name">The Weeknd</p>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <div class="time-info">
+                    <span id="current-time">0:00</span>
+                    <span id="total-time">0:00</span>
+                </div>
+            </div>
+            <div class="controls">
+                <button class="control-btn" id="prev-btn">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="control-btn play-btn" id="play-btn">
+                    <i class="fas fa-play" id="play-icon"></i>
+                </button>
+                <button class="control-btn" id="next-btn">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+            </div>
+            <div class="volume-container">
+                <i class="fas fa-volume-down volume-icon" id="volume-down"></i>
+                <div class="volume-slider" id="volume-slider">
+                    <div class="volume-level" id="volume-level"></div>
+                </div>
+                <i class="fas fa-volume-up volume-icon" id="volume-up"></i>
+            </div>
+            
+            <audio id="audio-player"></audio>
+        </div>
+        <div class="discord-server" id="discord-server" draggable="true">
+            <div class="server-info">
+                <div class="server-icon">
+                    <i class="fab fa-discord"></i>
+                </div>
+                <div class="server-details">
+                    <h3>Lua Secure | The 11 View</h3>
+                </div>
+            </div>
+            <a href="https://discord.gg/v9vrR7hs5d" class="join-button" target="_blank">
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="assets/scripts/67b732dc42aaffa9056d34cc477c863c.js"></script>
+</body>
+</html>
