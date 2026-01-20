@@ -621,6 +621,12 @@ body.winter-theme span {
 	border-radius: 15px 15px 0 0
 }
 
+.banner2 {
+	height: 200px;
+	background-image: url('https://media.discordapp.net/attachments/1403549414236356628/1458857320980287508/image.gif?ex=69705381&is=696f0201&hm=5882a089f531a1883ee8c1e92beca072633b5587fb2f3ccc3f813f1dc07d0f8a&=');
+	border-radius: 15px 15px 0 0
+}
+
 .profile-section {
 	display: flex;
 	align-items: flex-end;
